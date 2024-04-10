@@ -14,7 +14,6 @@ jobs:
 
       - name: Run tests
         run: echo "Estou rodando os testes"
-
       - name: Run tests 2
         run: ls -lah
 
@@ -26,6 +25,5 @@ jobs:
 
       - name: Run build
         run: echo "Estou rodando o build"
-
       - name: Run build 2
         run: ls -la

@@ -1,0 +1,26 @@
+name: teste de secrets and variables
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_secrets_and_variables:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: test secret
+        run: |
+          echo "My secret is $MY_CPF"
+          export MY_CPF=$MY_CPF
+          echo $MY_CPF
+
+      - name: test variables
+        run: |
+          echo "My variable is $MY_PHONE"
+          export MY_PHONE=$MY_PHONE
+          echo $MY_PHONE
+
