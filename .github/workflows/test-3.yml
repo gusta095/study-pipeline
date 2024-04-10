@@ -1,6 +1,6 @@
 name: Test CI Node.JS
 
-on: pull_request
+on: push
 
 jobs:
   build:
@@ -19,5 +19,4 @@ jobs:
           node -v
           npm -v
           npx -v
-      
 
