@@ -1,0 +1,23 @@
+name: Test CI Node.JS
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalando Node.JS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Comandos do node
+        run: |
+          node -v
+          npm -v
+          npx -v
+      
+
