@@ -23,4 +23,3 @@ jobs:
           echo "My variable is $MY_PHONE"
           export MY_PHONE=$MY_PHONE
           echo $MY_PHONE
-
