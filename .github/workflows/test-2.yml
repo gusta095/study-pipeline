@@ -1,0 +1,31 @@
+name: Test 2
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run tests
+        run: echo "Estou rodando os testes"
+
+      - name: Run tests 2
+        run: ls -lah
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run build
+        run: echo "Estou rodando o build"
+
+      - name: Run build 2
+        run: ls -la
