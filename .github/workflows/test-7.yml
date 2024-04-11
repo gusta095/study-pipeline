@@ -1,0 +1,23 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Login to Docker Hub
+      run: docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+
+    - name: Build Docker image
+      run: docker build -t gusta095/test-github:latest .
+
+    - name: Push Docker image to Docker Hub
+      run: docker push gusta095/test-github:latest
