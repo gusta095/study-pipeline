@@ -17,5 +17,6 @@ jobs:
         run: |
           echo "Bem vindo ${{ env.NAME }}"
           echo "Bem vindo $NAME"
+          echo "A senha é ${{ vars.NAME }}"
           echo "A senha é ${{ secrets.SENHA }}"
 
