@@ -11,12 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: test secrets and variables
         run: |
-          echo "Bem vindo ${{ env.NAME }}"
-          echo "Bem vindo $NAME"
-          echo "A senha é ${{ vars.NAME }}"
+          echo "Seja bem vindo ${{ vars.NAME }}"
           echo "A senha é ${{ secrets.SENHA }}"
 
