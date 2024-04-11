@@ -1,0 +1,21 @@
+name: test secrets and variables
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        run: |
+          echo "Bem vindo ${{ env.NAME }}"
+          echo "Bem vindo $NAME"
+          echo "A senha é ${{ secrets.SENHA }}"
+
